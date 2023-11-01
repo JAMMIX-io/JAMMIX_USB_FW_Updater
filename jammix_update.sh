@@ -63,7 +63,11 @@ case $response in
         echo "Flashing"
         # Replace 'your-command-here with the command you want to run.
         /media/fat/JAMMIX_FW/hid-flash /media/fat/JAMMIX_FW/${BIN// /} usb
-		read -p "" TEST
+        read -p "Press any key to exit" response1
+            case $response1 in
+              *) exit  
+               ;;
+            esac
         ;;
     [nN])
         echo "Exiting, please re-run this script if you want to flash JAMMIX."
