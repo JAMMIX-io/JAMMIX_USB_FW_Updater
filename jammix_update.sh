@@ -47,8 +47,8 @@ echo "Please set DIP 6 to ON, then..."
 echo ""
 echo "Rev2 boards: Momentarily press the STM32_RESET button."
 echo ""
-echo "Rev1 boards: Momentarily short the PROG header pins 1 and 3."
-echo "(see the rev1 Operator's Guide for help)"
+#echo "Rev1 boards: Momentarily short the PROG header pins 1 and 3."
+#echo "(see the rev1 Operator's Guide for help)"
 echo ""
 
 read -p "Do you want to flash JAMMIX (Y/N)? " response
