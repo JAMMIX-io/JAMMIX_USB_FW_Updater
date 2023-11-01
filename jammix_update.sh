@@ -3,7 +3,6 @@
 
 #set -e
 
-clear
 echo "Please state if your JAMMIX uses a F401 or F407 chip."
 echo ""
 echo "Pictures to determine your chip can be seen at..."
