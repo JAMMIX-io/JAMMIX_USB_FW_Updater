@@ -3,8 +3,11 @@
 
 #set -e
 
+clear
 echo "Please state if your JAMMIX uses a F401 or F407 chip."
-echo "Pictures to determine your chip can be seen at https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater."  
+echo ""
+echo "Pictures to determine your chip can be seen at..."
+echo "https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater."  
 echo "" 
 
 mkdir -p /media/fat/JAMMIX_FW
