@@ -21,7 +21,7 @@ while true; do
         1)
             echo "You selected Option 1 F401."
             # Place any additional commands you want to run for Option 1 here.
-            rm hid-flash
+            rm hid-flash*
             wget --no-check-certificate https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater/raw/main/hid-flash
             BIN=`wget -q -O - https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater | grep JAMMIX_F401 | sed 's/<[^>]*>//g'| sort | tail -1`
 			rm ${BIN// /}*
@@ -30,7 +30,7 @@ while true; do
         2)
             echo "You selected Option 2 F407."
             # Place any additional commands you want to run for Option 2 here.
-            rm hid-flash
+            rm hid-flash*
             wget --no-check-certificate https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater/raw/main/hid-flash
             BIN=`wget -q -O - https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater | grep JAMMIX_F407 | sed 's/<[^>]*>//g' | sort | tail -1`
 			rm ${BIN// /}*
@@ -48,7 +48,7 @@ echo ""
 echo "Rev2 boards: Momentarily press the STM32_RESET button."
 echo ""
 echo "Rev1 boards: Momentarily short the PROG header pins 1 and 3."
-echo "(see the rev1 User Guide for help)"
+echo "(see the rev1 Operator's Guide for help)"
 echo ""
 
 read -p "Do you want to flash JAMMIX (Y/N)? " response
@@ -58,11 +58,6 @@ case $response in
         echo "Flashing"
         # Replace 'your-command-here with the command you want to run.
         /media/fat/JAMMIX_FW/hid-flash /media/fat/JAMMIX_FW/${BIN// /} usb
-		echo ""
-		echo "If you see the 'Done!' message above, the firmware update succeeded."
-		echo ""
-		echo "Please set DIP 6 to OFF, then fully power-cycle your JAMMIX."
-		echo ""
 		read -p "" TEST
         ;;
     [nN])
