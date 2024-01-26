@@ -28,7 +28,8 @@ while true; do
             # Place any additional commands you want to run for Option 1 here.
             rm hid-flash*
             wget --no-check-certificate https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater/raw/main/hid-flash
-            BIN=`wget -q -O - https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater | grep JAMMIX_F401 | sed 's/<[^>]*>//g'| sort | tail -1`
+            #BIN=`wget -q -O - https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater | grep JAMMIX_F401 | sed 's/<[^>]*>//g'| sort | tail -1`
+	    BIN="JAMMIX_F401_MAIN_FW_20231104.bin"
 			rm ${BIN// /}*
             wget --no-check-certificate https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater/raw/main/${BIN// /}
             ;;
@@ -37,7 +38,8 @@ while true; do
             # Place any additional commands you want to run for Option 2 here.
             rm hid-flash*
             wget --no-check-certificate https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater/raw/main/hid-flash
-            BIN=`wget -q -O - https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater | grep JAMMIX_F407 | sed 's/<[^>]*>//g' | sort | tail -1`
+            #BIN=`wget -q -O - https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater | grep JAMMIX_F407 | sed 's/<[^>]*>//g' | sort | tail -1`
+	    BIN="JAMMIX_F407_MAIN_FW_20231104.bin"
 			rm ${BIN// /}*
             wget --no-check-certificate https://github.com/JAMMIX-io/JAMMIX_USB_FW_Updater/raw/main/${BIN// /}
             ;;
